@@ -215,7 +215,7 @@ body {
   font-size: 1.3rem; /* slightly larger text */
   font-weight: 500;
   box-shadow: 0 6px 14px rgba(0,0,0,0.35);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transition: 0.6s ease;
   background: linear-gradient(135deg, #667eea, #764ba2);
   font-size: 2rem;
   -webkit-background-clip: text;
@@ -230,7 +230,7 @@ body {
   color: #ffffff;
   padding: 80px;
   font-size: 2rem;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease;
   -webkit-text-fill-color: white;
 
   #skills .skill-icon {
@@ -368,7 +368,7 @@ body {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.35);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transition: 0.6s ease;
   text-align: center;
   width: 100%;
   max-width: 400px;
@@ -389,12 +389,13 @@ body {
   p {
   font-weight: 500;
   margin-bottom: 8px;
-  color: #ccc;
+  color: #ffffff;
   }
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
+  transition: 0.6s ease;
   box-shadow: 0 12px 24px rgba(0,0,0,0.45);
   background: linear-gradient(135deg, #ff6ec4, #7873f5);
 
@@ -412,4 +413,18 @@ body {
     background: rgba(0, 0, 0, 0.35);
     border-style: dotted;
   }
+}
+
+#contact .contact-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+#contact p {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* spacing between icon & text */
 }
