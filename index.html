@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
 <title>Marc Salvador</title>
 
 <style>
+
 :root {
     --bg: #ffffff;
     --text: #000000;
@@ -71,9 +73,9 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;      /* not inline-flex */
+    display: flex;
     gap: 30px;
-    margin-top: 8px;    /* small spacing below "Contact" */
+    margin-top: 8px;
 }
 
 .contact a:hover {
@@ -111,9 +113,21 @@ button {
 </div>
 
 <script>
+const body = document.body;
+const toggle = document.getElementById("toggleButton");
+
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+    toggle.textContent = "🌙";
+}
+
 function toggleMode() {
-    document.body.classList.toggle("dark");
-    document.getElementById("toggleButton").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+    body.classList.toggle("dark");
+
+    const isDark = body.classList.contains("dark");
+    toggle.textContent = isDark ? "🌙" : "☀️";
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 </script>
 
